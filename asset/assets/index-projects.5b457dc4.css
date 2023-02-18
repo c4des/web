@@ -1,0 +1,136 @@
+div:where(.astro-U6K2MW7Z) {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr minmax(60ch, 1fr) 1fr;
+    gap: 1rem
+}
+
+main:where(.astro-U6K2MW7Z) h1:first-child {
+    margin-top: 0
+}
+
+div:where(.astro-U6K2MW7Z) nav {
+    margin-top: .5rem
+}
+
+@media (max-width: 70ch) {
+    div:where(.astro-U6K2MW7Z) {
+        grid-template-columns: initial
+    }
+
+    div:where(.astro-U6K2MW7Z) nav {
+        writing-mode: initial;
+        transform: initial;
+        display: initial
+    }
+}
+
+nav:where(.astro-FTJI6RPT) {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    display: flex;
+    flex-direction: row-reverse
+}
+
+nav:where(.astro-FTJI6RPT) a:where(.astro-FTJI6RPT) {
+    width: fit-content
+}
+
+nav:where(.astro-FTJI6RPT) a:where(.astro-FTJI6RPT):not(:last-child) {
+    margin-top: .5rem
+}
+
+@media (max-width: 70ch) {
+    nav:where(.astro-FTJI6RPT) a:where(.astro-FTJI6RPT):not(:last-child) {
+        margin-right: .5rem
+    }
+}
+
+:root {
+    --bg: #050505;
+    --fg: #fff;
+    --fg-deep: #ddd;
+    --fg-deeper: #bbb
+}
+
+html {
+    background-color: var(--bg);
+    color: var(--fg-deeper);
+    font-family: Inter, sans-serif
+}
+
+h1 {
+    color: var(--fg)
+}
+
+h2 {
+    color: var(--fg-deep)
+}
+
+h3,
+h4,
+h5,
+h6 {
+    color: var(--fg-deeper)
+}
+
+a {
+    color: var(--fg)
+}
+
+hr {
+    border: solid;
+    border-width: thin 0 0
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes slide-from-bottom {
+    0% {
+        transform: translateY(30px)
+    }
+}
+
+@keyframes slide-to-top {
+    to {
+        transform: translateY(-30px)
+    }
+}
+
+@keyframes slide-to-bottom {
+    to {
+        transform: translateY(30px)
+    }
+}
+
+@keyframes slide-from-top {
+    0% {
+        transform: translateY(-30px)
+    }
+}
+
+::view-transition-old(root) {
+    animation: 90ms cubic-bezier(.4, 0, 1, 1) both fade-out, .3s cubic-bezier(.4, 0, .2, 1) both slide-to-top
+}
+
+::view-transition-new(root) {
+    animation: .21s cubic-bezier(0, 0, .2, 1) 90ms both fade-in, .3s cubic-bezier(.4, 0, .2, 1) both slide-from-bottom
+}
+
+.back-transition::view-transition-old(root) {
+    animation-name: fade-out, slide-to-bottom
+}
+
+.back-transition::view-transition-new(root) {
+    animation-name: fade-in, slide-from-top
+}
