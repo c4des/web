@@ -69,9 +69,11 @@
       var checkboxes = document.querySelectorAll('input[type="checkbox"]');
       for (var i = 0; i < checkboxes.length; i++) {
         checkboxes[i].disabled = true;
-        checkboxes[i].addEventListener("click", function() {
-          this.disabled = !this.disabled;
-        });
+      }
+
+      // Function to enable a checkbox with a given id
+      function enableCheckbox(id) {
+        document.getElementById(id).disabled = false;
       }
     </script>
   </body>
