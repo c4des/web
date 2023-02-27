@@ -1,27 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Awesome Website</title>
+  <title>Stylish Website Template</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container">
-    <div class="header">
-      <h1>My Awesome Website</h1>
-      <div class="toggle-theme">
-        <i class="sun"></i>
-        <i class="moon hide"></i>
-      </div>
-    </div>
-    <div class="content">
-      <h2>Welcome to My Website</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod augue ut mi lacinia, vel scelerisque nisi semper. Sed a lacus vitae leo molestie efficitur. Nulla facilisi. Nam vulputate, leo id vehicula blandit, lectus elit suscipit ex, ut dignissim dolor augue vel urna. Praesent auctor sapien ac ex lobortis, ac bibendum sapien consectetur.</p>
-      <p>Nunc in nisl nec quam lacinia tristique. Morbi mollis sapien vel semper dictum. Donec luctus fringilla risus vel ullamcorper. Fusce quis purus enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent et enim non quam eleifend dapibus. Integer volutpat diam vel velit luctus faucibus.</p>
-      <p>Sed eu leo vel sapien interdum posuere eget ac lorem. Pellentesque sollicitudin tortor sit amet erat egestas, sed ultrices ipsum cursus. Nam at ultrices mi. Integer a velit lobortis, bibendum elit non, placerat purus. Sed vel tellus lorem. Maecenas semper facilisis dui, eu pulvinar leo elementum vel. Curabitur sed turpis eu mi varius accumsan.</p>
-    </div>
+    <header>
+      <nav>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <h1>Stylish Website Template</h1>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Welcome to Our Website</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt eros in urna consequat consequat.
+          Donec euismod convallis blandit.</p>
+        <button class="cta-button">Learn More</button>
+      </section>
+
+      <section class="features">
+        <div class="feature-box">
+          <img src="https://picsum.photos/id/1/300/200" alt="Feature 1">
+          <h3>Feature 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt eros in urna consequat consequat.
+            Donec euismod convallis blandit.</p>
+        </div>
+
+        <div class="feature-box">
+          <img src="https://picsum.photos/id/2/300/200" alt="Feature 2">
+          <h3>Feature 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt eros in urna consequat consequat.
+            Donec euismod convallis blandit.</p>
+        </div>
+
+        <div class="feature-box">
+          <img src="https://picsum.photos/id/3/300/200" alt="Feature 3">
+          <h3>Feature 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt eros in urna consequat consequat.
+            Donec euismod convallis blandit.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Stylish Website Template</p>
+    </footer>
   </div>
+
+  <div class="toggle-theme">
+    <div class="toggle-icon">
+      <i class="fas fa-sun"></i>
+      <i class="fas fa-moon"></i>
+    </div>
+    <div class="toggle-text">Toggle Theme</div>
+  </div>
+
   <script src="script.js"></script>
 </body>
+
 </html>
