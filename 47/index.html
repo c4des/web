@@ -1,80 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>My Checklist Website</title>
-    <style>
-      body {
-        background-color: black;
-        color: white;
-        padding-top: 50px;
-      }
-      #logo {
-        display: block;
-        margin: 0 auto;
-        max-width: 80%;
-        height: auto;
-      }
-      .checkbox {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-      .checkbox label {
-        margin-left: 20px;
-      }
-      .checkbox input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
-      }
-      .checkbox input[type="checkbox"]:disabled + label {
-        color: grey;
-        text-decoration: line-through;
-      }
-    </style>
-  </head>
-  <body>
-    <img id="logo" src="logo.png" alt="My Logo">
-    <div id="checkboxes">
-      <div class="checkbox">
-        <input type="checkbox" id="event1">
-        <label for="event1">Event 1</label>
-      </div>
-      <div class="checkbox">
-        <input type="checkbox" id="event2">
-        <label for="event2">Event 2</label>
-      </div>
-      <div class="checkbox">
-        <input type="checkbox" id="event3">
-        <label for="event3">Event 3</label>
-      </div>
-      <div class="checkbox">
-        <input type="checkbox" id="event4">
-        <label for="event4">Event 4</label>
-      </div>
-      <div class="checkbox">
-        <input type="checkbox" id="event5">
-        <label for="event5">Event 5</label>
-      </div>
-      <div class="checkbox">
-        <input type="checkbox" id="event6">
-        <label for="event6">Event 6</label>
-      </div>
-      <div class="checkbox">
-        <input type="checkbox" id="event7">
-        <label for="event7">Event 7</label>
-      </div>
-    </div>
-    <script>
-      // Disable checkboxes so only the website developer can tick them
-      var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-      for (var i = 0; i < checkboxes.length; i++) {
-        checkboxes[i].disabled = true;
-      }
+<head>
+	<title>My Checklist</title>
+	<style>
+		body {
+			background-color: black;
+			color: white;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		
+		.logo {
+			display: block;
+			margin: 0 auto;
+			max-width: 200px;
+		}
+		
+		.checklist {
+			margin-top: 40px;
+			list-style: none;
+			padding: 0;
+		}
+		
+		.checklist li {
+			margin-bottom: 10px;
+		}
+		
+		.checklist input[type="checkbox"] {
+			display: none;
+		}
+		
+		.checklist label {
+			display: inline-block;
+			padding-left: 25px;
+			position: relative;
+			cursor: pointer;
+		}
+		
+		.checklist label:before {
+			content: "";
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			margin-right: 10px;
+			position: absolute;
+			left: 0;
+			top: 1px;
+			background-color: white;
+			border: 2px solid white;
+			border-radius: 3px;
+			box-sizing: border-box;
+		}
+		
+		.checklist input[type="checkbox"]:checked + label:before {
+			content: "\2713";
+			color: black;
+			background-color: white;
+			border-color: white;
+		}
+		
+		.checklist input[type="checkbox"]:disabled + label:before {
+			background-color: #777;
+			border-color: #777;
+			cursor: not-allowed;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="logo.png" alt="My Logo" class="logo">
+		<ul class="checklist">
+			<li><input type="checkbox" id="item1" name="item1" onclick="return false;" checked><label for="item1">Item 1</label></li>
+			<li><input type="checkbox" id="item2" name="item2" onclick="return false;" checked><label for="item2">Item 2</label></li>
+			<li><input type="checkbox" id="item3" name="item3" onclick="return false;"><label for="item3">Item 3</label></li>
+			<li><input type="checkbox" id="item4" name="item4" onclick="return false;"><label for="item4">Item 4</label></li>
+			<li><input type="checkbox" id="item5" name="item5" onclick="return false;"><label for="item5">Item 5</label></li>
+			<li><input type="checkbox" id="item6" name="item6" onclick="return false;"><label for="item6">Item 6</label></li>
+			<li><input type="checkbox" id="item7" name="item7" onclick="return false;"><label for="item7">Item 7</label></li>
 
-      // Function to enable a checkbox with a given id
-      function enableCheckbox(id) {
-        document.getElementById(id).disabled = false;
-      }
-    </script>
-  </body>
+      <script>
+        // enable checkbox 1
+        document.getElementById("checkbox1").checked = true;
+      </script>
+      
+		</ul>
+	</div>
+</body>
 </html>
+
+
