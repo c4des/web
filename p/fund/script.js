@@ -1,18 +1,10 @@
-const cursor = document.querySelector(".cursor");
-const links = document.querySelectorAll("a");
+const toggleBtn = document.querySelector('.toggle-theme');
+const body = document.querySelector('body');
+const sun = document.querySelector('.sun');
+const moon = document.querySelector('.moon');
 
-document.addEventListener("mousemove", e => {
-  cursor.setAttribute(
-    "style",
-    "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
-  );
-});
-
-links.forEach(link => {
-  link.addEventListener("mouseover", () => {
-    cursor.classList.add("link-grow");
-  });
-  link.addEventListener("mouseleave", () => {
-    cursor.classList.remove("link-grow");
-  });
+toggleBtn.addEventListener('click', () => {
+  body.classList.toggle('dark');
+  sun.classList.toggle('hide');
+  moon.classList.toggle('hide');
 });
