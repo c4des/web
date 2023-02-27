@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>p47</title>
+    <title>My Checklist Website</title>
     <style>
       body {
         background-color: black;
@@ -11,7 +11,7 @@
       #logo {
         display: block;
         margin: 0 auto;
-        max-width: 22%;
+        max-width: 80%;
         height: auto;
       }
       .checkbox {
@@ -28,40 +28,40 @@
       }
       .checkbox input[type="checkbox"]:disabled + label {
         color: grey;
-        text-decoration: none;
+        text-decoration: line-through;
       }
     </style>
   </head>
   <body>
-    <img id="logo" src="https://files.catbox.moe/df1kqe.png" alt="logo">
+    <img id="logo" src="logo.png" alt="My Logo">
     <div id="checkboxes">
       <div class="checkbox">
         <input type="checkbox" id="event1">
-        <label for="event1">planning</label>
+        <label for="event1">Event 1</label>
       </div>
       <div class="checkbox">
         <input type="checkbox" id="event2">
-        <label for="event2">preprod</label>
+        <label for="event2">Event 2</label>
       </div>
       <div class="checkbox">
         <input type="checkbox" id="event3">
-        <label for="event3">production</label>
+        <label for="event3">Event 3</label>
       </div>
       <div class="checkbox">
         <input type="checkbox" id="event4">
-        <label for="event4">postprod.</label>
+        <label for="event4">Event 4</label>
       </div>
       <div class="checkbox">
         <input type="checkbox" id="event5">
-        <label for="event5">mnmgnt and patching</label>
+        <label for="event5">Event 5</label>
       </div>
       <div class="checkbox">
         <input type="checkbox" id="event6">
-        <label for="event6">store uploads, etc</label>
+        <label for="event6">Event 6</label>
       </div>
       <div class="checkbox">
         <input type="checkbox" id="event7">
-        <label for="event7">release</label>
+        <label for="event7">Event 7</label>
       </div>
     </div>
     <script>
@@ -69,6 +69,9 @@
       var checkboxes = document.querySelectorAll('input[type="checkbox"]');
       for (var i = 0; i < checkboxes.length; i++) {
         checkboxes[i].disabled = true;
+        checkboxes[i].addEventListener("click", function() {
+          this.disabled = !this.disabled;
+        });
       }
     </script>
   </body>
