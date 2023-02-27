@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>p47 tl</title>
+    <title>p47</title>
     <style>
       body {
         background-color: black;
@@ -11,71 +11,65 @@
       #logo {
         display: block;
         margin: 0 auto;
-        max-width: 33%;
+        max-width: 22%;
         height: auto;
       }
-      #timeline {
+      .checkbox {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        position: relative;
-        margin-top: 50px;
-        color: white;
-      }
-      .timeline-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
         margin-bottom: 20px;
-        position: relative;
       }
-      .timeline-item:before {
-        content: "";
-        display: block;
+      .checkbox label {
+        margin-left: 20px;
+      }
+      .checkbox input[type="checkbox"] {
         width: 20px;
         height: 20px;
-        background-color: white;
-        border-radius: 50%;
-        position: absolute;
-        left: -40px;
       }
-      .timeline-item:first-child:before {
-        top: 0;
-      }
-      .timeline-item:last-child:before {
-        bottom: 0;
-      }
-      .timeline-item .description {
-        width: 100%;
-        padding-left: 50px;
+      .checkbox input[type="checkbox"]:disabled + label {
+        color: grey;
+        text-decoration: line-through;
       }
     </style>
   </head>
   <body>
     <img id="logo" src="https://files.catbox.moe/df1kqe.png" alt="logo">
-    <div id="timeline">
-      <div class="timeline-item">
-        <div class="description">planning</div>
+    <div id="checkboxes">
+      <div class="checkbox">
+        <input type="checkbox" id="event1">
+        <label for="event1">planning</label>
       </div>
-      <div class="timeline-item">
-        <div class="description">preproduction</div>
+      <div class="checkbox">
+        <input type="checkbox" id="event2">
+        <label for="event2">preprod</label>
       </div>
-      <div class="timeline-item">
-        <div class="description">production</div>
+      <div class="checkbox">
+        <input type="checkbox" id="event3">
+        <label for="event3">production</label>
       </div>
-      <div class="timeline-item">
-        <div class="description">postrproduction</div>
+      <div class="checkbox">
+        <input type="checkbox" id="event4">
+        <label for="event4">postprod.</label>
       </div>
-      <div class="timeline-item">
-        <div class="description">test + send in</div>
+      <div class="checkbox">
+        <input type="checkbox" id="event5">
+        <label for="event5">mnmgnt and patching</label>
       </div>
-      <div class="timeline-item">
-        <div class="description">final bug patching + store upload, etc</div>
+      <div class="checkbox">
+        <input type="checkbox" id="event6">
+        <label for="event6">store uploads, etc</label>
       </div>
-      <div class="timeline-item">
-        <div class="description">release</div>
+      <div class="checkbox">
+        <input type="checkbox" id="event7">
+        <label for="event7">release</label>
       </div>
     </div>
+    <script>
+      // Disable checkboxes so only the website developer can tick them
+      var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].disabled = true;
+      }
+    </script>
   </body>
 </html>
