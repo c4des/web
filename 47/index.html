@@ -1,105 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>My Checklist</title>
-	<style>
-		body {
-			background-color: black;
-			color: white;
-			font-family: Arial, sans-serif;
-			font-size: 16px;
-			margin: 0;
-			padding: 0;
-		}
-		
-		.container {
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 20px;
-		}
-		
-		.logo {
-			display: block;
-			margin: 0 auto;
-			max-width: 200px;
-		}
-		
-		.checklist {
-			margin-top: 40px;
-			list-style: none;
-			padding: 0;
-		}
-		
-		.checklist li {
-			margin-bottom: 10px;
-		}
-		
-		.checklist input[type="checkbox"] {
-			display: none;
-		}
-		
-		.checklist label {
-			display: inline-block;
-			padding-left: 25px;
-			position: relative;
-			cursor: pointer;
-		}
-		
-		.checklist label:before {
-			content: "";
-			display: inline-block;
-			width: 16px;
-			height: 16px;
-			margin-right: 10px;
-			position: absolute;
-			left: 0;
-			top: 1px;
-			background-color: white;
-			border: 2px solid white;
-			border-radius: 3px;
-			box-sizing: border-box;
-		}
-		
-		.checklist input[type="checkbox"]:checked + label:before {
-			content: "\2713";
-			color: black;
-			background-color: white;
-			border-color: white;
-		}
-		
-		.checklist input[type="checkbox"]:disabled + label:before {
-			background-color: #777;
-			border-color: #777;
-			cursor: not-allowed;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-	<div class="container">
-		<img src="logo.png" alt="My Logo" class="logo">
-		<ul class="checklist">
-			<li><input type="checkbox" id="item1" name="item1" onclick="return false;" checked><label for="item1">Item 1</label></li>
-			<li><input type="checkbox" id="item2" name="item2" onclick="return false;" checked><label for="item2">Item 2</label></li>
-			<li><input type="checkbox" id="item3" name="item3" onclick="return false;"><label for="item3">Item 3</label></li>
-			<li><input type="checkbox" id="item4" name="item4" onclick="return false;"><label for="item4">Item 4</label></li>
-			<li><input type="checkbox" id="item5" name="item5" onclick="return false;"><label for="item5">Item 5</label></li>
-			<li><input type="checkbox" id="item6" name="item6" onclick="return false;"><label for="item6">Item 6</label></li>
-			<li><input type="checkbox" id="item7" name="item7" onclick="return false;"><label for="item7">Item 7</label></li>
+    <header>
+        <h1>My Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="#about"><i class="fas fa-user"></i>About</a></li>
+                <li><a href="#skills"><i class="fas fa-laptop-code"></i>Skills</a></li>
+                <li><a href="#projects"><i class="fas fa-code-branch"></i>Projects</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <script>
-        // enable checkbox 1
-        document.getElementById("item1").checked = true;
-        document.getElementById("item2").checked = true;
-        document.getElementById("item3").checked = true;
-        document.getElementById("checkbox4").checked = true;
-        document.getElementById("checkbox5").checked = true;
-        document.getElementById("checkbox6").checked = true;
-        document.getElementById("checkbox7").checked = true;
-      </script>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>My name is [Your Name], and I am a [Your Profession]. I am passionate about [Your Interests], and I love to [Your Hobbies].</p>
+            <p>You can find me on:</p>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-discord"></i></a></li>
+            </ul>
+        </section>
 
-		</ul>
-	</div>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>[Your Skill 1]</li>
+                <li>[Your Skill 2]</li>
+                <li>[Your Skill 3]</li>
+                <li>[Your Skill 4]</li>
+                <li>[Your Skill 5]</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="[Your Project 1 Link]">[Your Project 1 Name]</a></li>
+                <li><a href="[Your Project 2 Link]">[Your Project 2 Name]</a></li>
+                <li><a href="[Your Project 3 Link]">[Your Project 3 Name]</a></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="send-email.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; [Your Name]
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
