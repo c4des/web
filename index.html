@@ -1,63 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" class="astro-U6K2MW7Z">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg"> -->
-    <meta name="generator" content="Astro v1.2.2">
-
-    <title>nora</title>
-    <meta name="title" content="nora">
-    <meta name="description" content="nora's website">
-    <link rel="canonical" href="https://mono.rip/">
-
-    <link rel="me" href="https://uwu.social/@nora">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mono.rip/">
-    <meta property="og:title" content="nora">
-    <meta property="og:description" content="nora's website">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet"></noscript>
-
-    <link rel="stylesheet" href="asset//assets/index-projects.5b457dc4.css" />
-    <script type="module">let a;async function r(n){const t=await(await fetch(n)).text();return a??=new DOMParser,a.parseFromString(t,"text/html")}function o(n){return n.navigationType==="push"||n.navigationType==="replace"?!1:n.destination.index!==-1&&n.destination.index<navigation.currentEntry.index}function s(n){!document.startViewTransition||navigation.addEventListener("navigate",e=>{const t=new URL(e.destination.url);if(location.origin!==t.origin)return;if(location.href===t.href)return e.preventDefault();const i=o(e);e.intercept({handler:()=>n({destination:t.pathname,origin:location.pathname,back:i})})})}const c=()=>s(async({destination:n,back:e})=>{const t=await r(n);e&&document.documentElement.classList.add("back-transition");const i=document.startViewTransition(()=>{document.head.innerHTML=t.head.innerHTML,document.body.querySelector("main").innerHTML=t.body.querySelector("main").innerHTML});try{await i.finished}finally{document.documentElement.classList.remove("back-transition")}});c();
-</script>
-    <script type="module" src="asset//page.5a6f3db5.js"></script>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
-
-<body class="astro-U6K2MW7Z">
-    <div class="astro-U6K2MW7Z">
-        <nav class="astro-FTJI6RPT">
-            <a rel="prefetch" href="https://mono.rip/" class="astro-FTJI6RPT">about</a><a rel="prefetch" href="https://mono.rip/p/" class="astro-FTJI6RPT">projects</a>
+<body>
+    <header>
+        <h1>My Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="#about"><i class="fas fa-user"></i>About</a></li>
+                <li><a href="#skills"><i class="fas fa-laptop-code"></i>Skills</a></li>
+                <li><a href="#projects"><i class="fas fa-code-branch"></i>Projects</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
         </nav>
+    </header>
 
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>My name is [Your Name], and I am a [Your Profession]. I am passionate about [Your Interests], and I love to [Your Hobbies].</p>
+            <p>You can find me on:</p>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-discord"></i></a></li>
+            </ul>
+        </section>
 
-        <main class="astro-U6K2MW7Z">
-            <img src="https://files.catbox.moe/uaa4hz.png" alt="nora icon" style="width:100px;height:100px;">
-            <p>
-                <a href="https://github.com/c4des">github</a> | <a href="https://discord.com/users/274909326869528576">discord</a> | <a href="https://twitter.com/c4des_">twitter</a> | <a href="mailto:felony@skiff.com">email</a>
-            </p>
-            <p>
-                Hello there, I'm Nora, also known as c4des online.
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>[Your Skill 1]</li>
+                <li>[Your Skill 2]</li>
+                <li>[Your Skill 3]</li>
+                <li>[Your Skill 4]</li>
+                <li>[Your Skill 5]</li>
+            </ul>
+        </section>
 
-                I don't know what to do with my life. </p>
-            <p>
-                You may know me because I'm <a href="https://twitter.com/dakeagain">@dakeagain</a> on Twitter. I'm just that cool B)
-            </p>
-        </main>
-        <aside class="astro-U6K2MW7Z">
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="[Your Project 1 Link]">[Your Project 1 Name]</a></li>
+                <li><a href="[Your Project 2 Link]">[Your Project 2 Name]</a></li>
+                <li><a href="[Your Project 3 Link]">[Your Project 3 Name]</a></li>
+            </ul>
+        </section>
 
-        </aside>
-    </div>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="send-email.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
 
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; [Your Name]
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
